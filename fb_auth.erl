@@ -227,6 +227,9 @@ process_facebook_access_token(Resp) ->
                 ["access_token", AccessToken] ->
                     ?LOG_DEBUG("process_facebook_access_token: access_token=~p",[AccessToken]),
                     {ok, AccessToken};
+                ["access_token", AccessToken, "expires", Expires] ->
+                    ?LOG_DEBUG("process_facebook_access_token: access_token=~p",[AccessToken]),
+                    {ok, AccessToken};
                 _ ->
                     ?LOG_DEBUG("process_facebook_access_token: unexpected response: ~p", [Body]),
                     {error, "Unexpected body response from facebook"}
