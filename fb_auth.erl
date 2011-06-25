@@ -223,7 +223,7 @@ process_facebook_access_token(Resp) ->
     % Extract the info we need
     case Resp of 
         {ok, {{_,200,_}, _, Body}} ->
-            case string:tokens(Body, "=") of
+            case string:tokens(Body, "=&") of
                 ["access_token", AccessToken] ->
                     ?LOG_DEBUG("process_facebook_access_token: access_token=~p",[AccessToken]),
                     {ok, AccessToken};
