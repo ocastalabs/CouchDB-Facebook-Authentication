@@ -16,6 +16,8 @@ test: clean
 install: compile
 	sudo cp fb_auth.beam $(COUCHDB_ERLANG_LIB)/ebin/
 	sudo cp fb_auth.ini $(COUCHDB_LOCALD)
+	sudo chown root:couchdb $(COUCHDB_LOCALD)/fb_auth.ini
+	sudo chmod 660 $(COUCHDB_LOCALD)/fb_auth.ini
 	sudo /etc/init.d/couchdb restart
 
 compile: clean
