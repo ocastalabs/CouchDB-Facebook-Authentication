@@ -1,6 +1,7 @@
 COUCH_ROOT = /opt/couchbase-server
 COUCHDB_ERLANG_LIB = $(COUCH_ROOT)/lib/couchdb/erlang/lib/couch-1.0.2
 COUCHDB_LOCALD = $(COUCH_ROOT)/etc/couchdb/local.d
+COUCHDB_INIT_SCRIPT = /etc/init.d/couchdb
 
 
 any:
@@ -16,7 +17,7 @@ test: clean
 install: compile
 	sudo cp fb_auth.beam $(COUCHDB_ERLANG_LIB)/ebin/
 	sudo cp fb_auth.ini $(COUCHDB_LOCALD)
-	sudo /etc/init.d/couchdb restart
+	sudo $(COUCHDB_INIT_SCRIPT) restart
 
 compile: clean
 	erlc -I $(COUCHDB_ERLANG_LIB)/include/ fb_auth.erl
