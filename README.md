@@ -43,8 +43,7 @@ Build
 
 There is an unsophisticated Makefile with targets for _test_ (requires eunit), _compile_ and _install_. 
 
-In order to compile and install this module you might have to edit the Makefile and change one or more of _COUCH\_ROOT_, _\_COUCHDB\_ERLANG\_LIB_ 
-and _COUCHDB\_LOCALD_ values to point to the appropriate directories within your couchdb installation
+In order to compile and install this module you might have to edit the Makefile and change one or more of _COUCH\_ROOT_, _\_COUCHDB\_ERLANG\_LIB_, _COUCHDB\_LOCALD_ and _COUCHDB\_INIT\_SCRIPT_ values to point to the appropriate directories and file within your couchdb installation.
 
 
 Installation
