@@ -188,7 +188,7 @@ process_facebook_graphme_response(Resp) ->
         {ok, {{_,200,_}, _, Body}} ->
             % Decode the facebook response body, extracting the
             % ID and the complete response.
-            {FBInfo}=couch_util:json_decode(Body),
+            {FBInfo}=?JSON_DECODE(Body),
             ID=couch_util:get_value(<<"id">>, FBInfo),
             {ok, ID};
         _ ->
