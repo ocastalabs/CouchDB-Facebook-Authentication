@@ -1,0 +1,4 @@
+#!/bin/bash
+make
+make install
+#"https://www.facebook.com/dialog/oauth?client_id=249348058430770&scope=offline_access,user_about_me&redirect_uri=http:%2F%2Fcouchdb.no-ip.org:5984%2F_fb"
