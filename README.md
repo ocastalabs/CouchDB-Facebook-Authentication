@@ -1,3 +1,5 @@
+The newer CouchDB-XO\_Auth project does this better so I suggest looking at that rather than this.
+
 Facebook Authentication for CouchDB
 ===================================
 
